@@ -36,6 +36,9 @@ jobs:
     # put the app in it
     - name: copy
       run: mv ./target/release/nlp-utils ./app/nlp-utils
+      
+    - name: dl-libtorch
+      run: wget https://download.pytorch.org/libtorch/cpu/libtorch-shared-with-deps-2.0.1%2Bcpu.zip
 
 
     # heroku deployment

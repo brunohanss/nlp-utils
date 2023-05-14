@@ -92,11 +92,12 @@ if (origin == Language::English && (target == Language::Spanish || target == Lan
                 .translation.marian
                 .translate(&[&input.input], origin, target );
             println!("Input translated : {:?}", &input_translated);
+            
         let result = match input_translated {
             Ok(translation) => translation,
             Err(error) => panic!("Problem getting translation: {:?}", error),
         };
-        
+
         return Json(result)
 }else  {
     let input_translated =

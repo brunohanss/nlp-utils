@@ -96,6 +96,7 @@ if (origin == Language::English && (target == Language::Spanish || target == Lan
             Ok(translation) => translation,
             Err(error) => panic!("Problem getting translation: {:?}", error),
         };
+        
         return Json(result)
 }else  {
     let input_translated =
